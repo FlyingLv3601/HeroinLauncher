@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+html{
+    overflow-x: hidden;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    color: #fff;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #161b2b;
+    align-items: flex-start;
+    overflow-x: hidden;
+    padding: 20px;
+    position: relative;
+}
+
+.wrapper {
+    background-color: #161b2b;
+    max-width: 900px;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+h1 {
+    color: #00bfff;
+    font-size: 26px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.mods-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.mod-item {
+    background-color: #1c1f3b;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.mod-item:hover {
+    transform: translateY(-5px);
+}
+
+.mod-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.mod-name {
+    font-weight: 500;
+    margin-bottom: 3px;
+    text-align: center;
+    word-break: break-word;
+    width: 100%;
+}
+
+.mod-version {
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+}
+
+.download-btn {
+    background: #ff2e9b;
+    color: #111;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    text-align: center;
+}
+
+.download-btn:hover {
+    background: #e6298b;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .mods-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .mods-list {
+        grid-template-columns: 1fr;
+    }
+    body {
+        padding: 10px;
+    }
+    .wrapper {
+        padding: 15px;
+    }
+}

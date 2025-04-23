@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .wrapper {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    background-color: #161b2b;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  .minecraft, .launcher {
+    flex: 1;
+    display: flex;
+    margin-top: -30px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  h1 {
+    font-size: 26px;
+    color: #00bfff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .ram label {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .ram input[type="range"] {
+    width: 100%;
+    margin: 5px 0;
+    cursor: pointer;
+    accent-color: #00ffcc;
+  }
+  
+  .ramcounter {
+    font-weight: bold;
+    color: #00ffcc;
+  }
+  
+  .folders {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .folders button {
+    background-color: #1c1f3b;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .folders button:hover {
+    background-color: #2a2e4d;
+  }
+  
+  .width-launcher,
+  .height-launcher {
+    background-color: #1c1f3b;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ccc;
+  }
+  
+  .width-launcher input,
+  .height-launcher input {
+    width: 100px;
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: #2a2f4f;
+    color: #fff;
+  }
+
+  
+  .bg-image label {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 6px;
+    display: block;
+  }
+  
+  .bg-image input[type="file"] {
+    background-color: #1c1f3b;
+    color: #fff; 
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+  }
+  
+  .buttons-save {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: auto;
+    margin-left: -20px;
+  }
+  
+  .buttons-save button {
+    background-color: #ff2e9b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .buttons-save button:hover {
+    background-color: #e02689;
+  }
+  

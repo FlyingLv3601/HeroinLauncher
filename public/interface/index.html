@@ -1,0 +1,88 @@
+<!--
+
+
+██╗    ██╗   ██╗██████╗  ██████╗  ██████╗  ██╗
+██║    ██║   ██║╚════██╗██╔════╝ ██╔═████╗███║
+██║    ██║   ██║ █████╔╝███████╗ ██║██╔██║╚██║
+██║    ╚██╗ ██╔╝ ╚═══██╗██╔═══██╗████╔╝██║ ██║
+███████╗╚████╔╝ ██████╔╝╚██████╔╝╚██████╔╝ ██║
+╚══════╝ ╚═══╝  ╚═════╝  ╚═════╝  ╚═════╝  ╚═╝
+                                      
+
+done: 20.04.25 5:34amв
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>heroin Launcher</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<div class="container">
+    <div class="left">
+      <div class="icon"><img src="./assets/icon.png" width="100px"></div>
+      <h2>Account</h2>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="player-user-name" placeholder="username" />
+      </div>
+      <div class="form-group">
+        <label>Minecraft Version</label>
+        <div class="dropdown" id="dropdown">
+          <div class="selected" id="selected">1.20.4</div>
+          <div class="version" id="version">
+           <div class="version-item" value="1.20.4">1.20.4</div>
+            <div class="version-item" value="1.19.4">1.19.4</div>
+            <div class="version-item" value="1.18.2">1.18.2</div>
+            <div class="version-item" value="1.16.5">1.16.5</div>
+            <div class="version-item" value="1.12.2">1.12.2</div>
+            <div class="version-item" value="1.20.4">1.20.4</div>
+            <div class="version-item" value="1.19.4">1.19.4</div>
+            <div class="version-item" value="1.18.2">1.18.2</div>
+            <div class="version-item" value="1.16.5">1.16.5</div>
+            <div class="version-item" value="1.12.2">1.12.2</div>
+            <div class="version-item" value="1.20.4">1.20.4</div>
+            <div class="version-item" value="1.19.4">1.19.4</div>
+            <div class="version-item" value="1.18.2">1.18.2</div>
+            <div class="version-item" value="1.16.5">1.16.5</div>
+            <div class="version-item" value="1.12.2">1.12.2</div>
+            <div class="version-item" value="1.20.4">1.20.4</div>
+            <div class="version-item" value="1.19.4">1.19.4</div>
+            <div class="version-item" value="1.18.2">1.18.2</div>
+            <div class="version-item" value="1.16.5">1.16.5</div>
+            <div class="version-item" value="1.12.2">1.12.2</div>
+            <div class="version-item" value="1.12.2">1.12.2</div>
+          </div>
+        </div>        
+      </div>
+      <button class="login-btn" id="play-button">PLAY</button>
+    </div>
+    <div class="right">
+      <div class="nav">
+        <a href="#" id="settings-button">settings</a>
+        <a href="#" id="mods-list">mods</a>
+        <a href="#">bot</a>
+        <a href="#">Contact</a>
+        <a href="#">other</a>
+      </div>
+      <iframe src="./templates/mods/index.html" frameborder="0" style="width: 100%;height: 100%;overflow-y:auto;display: none;" id="mods-iframe"></iframe>
+      <iframe src="./templates/settings/settings.html" frameborder="0" style="width: 100%;height: 100%;display: none;" id="iframe-settings"></iframe>
+      <div class="right-content" id="right-content" >
+        <div class="welcome">
+          <h1>Heroin Launcher</h1>
+          <p>
+            Heroin Launcher was created for 2b2t players. This launcher includes mods and other features to make your time on 2b2t more comfortable.
+            If you have any ideas on how we can improve the launcher, feel free to send them to lv3601@gmail.com.
+            Also, if you're interested in joining our team, just let me know!        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="script/index.js" type="module"></script>
+<script src="script/elements.js" type="module"></script>
+
+</body>
+</html>

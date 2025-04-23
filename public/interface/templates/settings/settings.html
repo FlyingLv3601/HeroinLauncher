@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="wrapper" id="iframeSettings">
+    <div class="minecraft">
+      <h1>Minecraft Settings</h1>
+      <div class="ram">
+        <label for="ramRange">RAM Allocation</label>
+        <input type="range" id="ramRangeInput" min="1" max="8" value="4" />
+        <span>RAM: <span class="ramcounter">4 GB</span></span>
+      </div>
+    </div>
+
+    <div class="launcher">
+      <h1>Launcher</h1>
+      <div class="width-launcher">Width: <input type="number" id="width-launcher" placeholder="e.g. 1280"/></div>
+      <div class="height-launcher">Height: <input type="number" id="height-launcher" placeholder="e.g. 720"/></div>
+
+      <div class="bg-image">
+        <label>Background Image:</label>
+        <input type="file" accept="image/*" />
+      </div>
+
+      <div class="buttons-save">
+        <button id="close-settings">Close</button>
+        <button id="theme-settings">colors</button>
+        <button id="save-settings-button">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>
