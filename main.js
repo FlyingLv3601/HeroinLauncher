@@ -7,6 +7,8 @@ function createWindow () {
   const win = new BrowserWindow({
     width: 1280,
     height: 720,
+    resizable: false,
+    autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, 'src/preload.js'),
       contextIsolation: true,
@@ -15,7 +17,9 @@ function createWindow () {
     }
   });
 
-  win.loadFile('public/interface/index.html')
+  win.setMenu(null); // Completely remove the menu bar
+
+  win.loadFile('public/interface/index.html');
 }
 
 app.whenReady().then(() => {

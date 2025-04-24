@@ -7,10 +7,10 @@
     <title>Mods Download</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
         <div class="mods-container">
             <h1>Mods Download</h1>
-            
+
             <div class="mods-list">
                 <!-- Meteor Client -->
                 <div class="mod-item">
@@ -18,84 +18,104 @@
                         <span class="mod-name">Meteor Client</span>
                         <span class="mod-version">1.20.1</span>
                     </div>
-                    <button class="download-btn" data-mod="meteor">Download</button>
+                    <button class="download-btn" data-mod="meteor" onclick="openMod('meteor')">Download</button>
                 </div>
-                
+
                 <!-- Thunder Hack -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Thunder Hack</span>
                         <span class="mod-version">1.19.4</span>
                     </div>
-                    <button class="download-btn" data-mod="thunder">Download</button>
+                    <button class="download-btn" data-mod="thunderhack" onclick="openMod('thunderhack')">Download</button>
                 </div>
-                
+
                 <!-- BT Hack -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">BT Hack</span>
                         <span class="mod-version">1.18.2</span>
                     </div>
-                    <button class="download-btn" data-mod="bt-hack">Download</button>
+                    <button class="download-btn" data-mod="bthack" onclick="openMod('bthack')">Download</button>
                 </div>
-                
+
                 <!-- Sodium -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Sodium</span>
                         <span class="mod-version">1.20.4</span>
                     </div>
-                    <button class="download-btn" data-mod="sodium">Download</button>
+                    <button class="download-btn" data-mod="sodium" onclick="openMod('sodium')">Download</button>
                 </div>
-                
+
                 <!-- Iris -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Iris</span>
                         <span class="mod-version">1.20.1</span>
                     </div>
-                    <button class="download-btn" data-mod="iris">Download</button>
+                    <button class="download-btn" data-mod="iris" onclick="openMod('iris')">Download</button>
                 </div>
-                
-                <!-- Forge API -->
+
+                <!-- Fabric API -->
                 <div class="mod-item">
                     <div class="mod-info">
-                        <span class="mod-name">Forge API</span>
+                        <span class="mod-name">Fabric API</span>
                         <span class="mod-version">1.20.4</span>
                     </div>
-                    <button class="download-btn" data-mod="forge-api">Download</button>
+                    <button class="download-btn" data-mod="fabricapi" onclick="openMod('fabricapi')">Download</button>
                 </div>
-                
+
                 <!-- Litematica -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Litematica</span>
                         <span class="mod-version">1.19.2</span>
                     </div>
-                    <button class="download-btn" data-mod="litematica">Download</button>
+                    <button class="download-btn" data-mod="litematica" onclick="openMod('litematica')">Download</button>
                 </div>
-                
+
                 <!-- Replay Mod -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Replay Mod</span>
                         <span class="mod-version">1.20.1</span>
                     </div>
-                    <button class="download-btn" data-mod="replay">Download</button>
+                    <button class="download-btn" data-mod="replaymod" onclick="openMod('replaymod')">Download</button>
                 </div>
-                
+
                 <!-- Journey Minimap -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Journey Minimap</span>
                         <span class="mod-version">1.18.2</span>
                     </div>
-                    <button class="download-btn" data-mod="journey">Download</button>
+                    <button class="download-btn" data-mod="minimap" onclick="openMod('minimap')">Download</button>
                 </div>
             </div>
+
+            <button id="close-button">close</button>
         </div>
     </div>
-    
-    <script src="./mods.js"></script>
+
+    <script type="module">
+        // Ensure this is loaded first
+        import { modLinks } from "../../../script/elements.js";
+
+        // Define the openMod function
+        function openMod(mod) {
+            // Ensure that modLinks object exists and contains the proper link
+            if(modLinks[mod]) {
+                window.open(modLinks[mod]);
+            } else {
+                console.error(`Link for ${mod} is not defined`);
+            }
+        }
+
+        // Close button functionality
+        document.getElementById("close-button").addEventListener("click", () => {
+            document.getElementById("wrapper").style.display = "none";
+        });
+    </script>
 </body>
 </html>

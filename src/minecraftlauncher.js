@@ -21,11 +21,9 @@ async function fetchFabricLoaderVersion(mcVersion) {
 
 async function installFabric(mcVersion, fabricVersionId) {
   const versionDir = path.join(minecraftDir, 'versions', fabricVersionId);
-  if (!fs.existsSync(versionDir)) {
-    const { data } = await axios.get(`https://meta.fabricmc.net/v2/versions/loader/${mcVersion}/${fabricVersionId.split('-').pop()}/profile/json`);
-    await fs.ensureDir(versionDir);
-    await fs.writeJson(path.join(versionDir, `${fabricVersionId}.json`), data);
-  }
+  const { data } = await axios.get(`https://meta.fabricmc.net/v2/versions/loader/${mcVersion}/${fabricVersionId.split('-').pop()}/profile/json`);
+  await fs.ensureDir(versionDir);
+  await fs.writeJson(path.join(versionDir, `${fabricVersionId}.json`), data);
 }
 
 async function launchMinecraft(username, mcVersion) {
@@ -55,10 +53,6 @@ async function launchMinecraft(username, mcVersion) {
   };
 
   launcher.launch(options);
-  launcher.on('debug', console.log);
-  launcher.on('data', (e) => console.log(e.toString()));
-  launcher.on('close', console.log);
-  launcher.on('error', console.error);
 }
 
 module.exports = { launchMinecraft };
