@@ -26,13 +26,6 @@ app.whenReady().then(() => {
   createWindow()
 })
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
-})
-
-
 
 ipcMain.on('sendUsername', async (event, username, version) => {
     await launchMinecraft(username, version);

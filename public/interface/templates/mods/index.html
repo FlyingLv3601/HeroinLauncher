@@ -94,28 +94,22 @@
                 </div>
             </div>
 
-            <button id="close-button">close</button>
+            <button id="close">close</button>
         </div>
     </div>
+<script src="./script.js" type="module"></script>
+<script type="module">
+    import { elements } from "../../script/elements.js";
+     
+    window.openMod = function(mod) {
+    window.open(modLinks[mod]);
+}
+const parent = window.parent;
 
-    <script type="module">
-        // Ensure this is loaded first
-        import { modLinks } from "../../../script/elements.js";
-
-        // Define the openMod function
-        function openMod(mod) {
-            // Ensure that modLinks object exists and contains the proper link
-            if(modLinks[mod]) {
-                window.open(modLinks[mod]);
-            } else {
-                console.error(`Link for ${mod} is not defined`);
-            }
-        }
-
-        // Close button functionality
-        document.getElementById("close-button").addEventListener("click", () => {
-            document.getElementById("wrapper").style.display = "none";
-        });
-    </script>
+document.getElementById("close").addEventListener("click", () => {
+    document.querySelector("body").style.display = "none";
+    parent.document.getElementById("right-content").style.display = "flex";
+});
+</script>
 </body>
 </html>
