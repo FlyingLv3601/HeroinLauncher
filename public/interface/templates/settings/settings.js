@@ -7,7 +7,7 @@ if (ramRange && ramCounter) {
 
   ramCounter.textContent = `${ramRange.value} GB`;
   ramRange.addEventListener('input', () => {
-    ramCounter.textContent = `${ramRange.value} GB`;
+  ramCounter.textContent = `${ramRange.value} GB`;
   });
 }
 

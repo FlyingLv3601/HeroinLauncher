@@ -105,20 +105,19 @@ h1 {
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-    .mods-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 480px) {
-    .mods-list {
-        grid-template-columns: 1fr;
-    }
-    body {
-        padding: 10px;
-    }
-    .wrapper {
-        padding: 15px;
-    }
-}
+
+#close  {
+    background-color: #ff2e9b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 5px;
+    transition: background 0.3s ease;
+  }
+  
+

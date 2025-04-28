@@ -17,7 +17,7 @@ function createWindow () {
     }
   });
 
-  win.setMenu(null); // Completely remove the menu bar
+  win.setMenu(null);
 
   win.loadFile('public/interface/index.html');
 }

@@ -1,16 +1,18 @@
 import { elements } from './elements.js';
 import { hide, show } from "../../module/showHide.js";
 
+const savedNickname = localStorage.getItem('nickname');
+if (savedNickname) {
+  elements.playerUserName.value = savedNickname;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const versionItems = document.querySelectorAll(".version-item");
-
 
   function hideAllIframes() {
     hide(elements.iframeSettings);
     hide(elements.modsIframe);
-    show(elements.rightContent);
   }
-
 
   elements.dropdown.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -29,7 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   elements.playButton.addEventListener("click", () => {
-    window.electronAPI.sendUserInput(elements.playerUserName.value, elements.selected.textContent);
+    const nickname = elements.playerUserName.value.trim();
+    
+    if (nickname) {
+      localStorage.setItem('nickname', nickname);
+      
+      window.electronAPI.sendUserInput(nickname, elements.selected.textContent);
+    }
   });
 
   elements.settingButtons.addEventListener("click", () => {
@@ -44,8 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
     hide(elements.rightContent);
   });
 
-
   window.addEventListener('message', (event) => {
+    if (event.data.action === "closeMods") {
+      hideAllIframes();
+      show(elements.rightContent);
+    }
     if (event.data.ram) {
       window.electronAPI.sendRamAmount(event.data.ram);
     }

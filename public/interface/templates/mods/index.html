@@ -10,9 +10,7 @@
     <div class="wrapper" id="wrapper">
         <div class="mods-container">
             <h1>Mods Download</h1>
-
             <div class="mods-list">
-                <!-- Meteor Client -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Meteor Client</span>
@@ -20,8 +18,6 @@
                     </div>
                     <button class="download-btn" data-mod="meteor" onclick="openMod('meteor')">Download</button>
                 </div>
-
-                <!-- Thunder Hack -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Thunder Hack</span>
@@ -29,8 +25,6 @@
                     </div>
                     <button class="download-btn" data-mod="thunderhack" onclick="openMod('thunderhack')">Download</button>
                 </div>
-
-                <!-- BT Hack -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">BT Hack</span>
@@ -38,8 +32,6 @@
                     </div>
                     <button class="download-btn" data-mod="bthack" onclick="openMod('bthack')">Download</button>
                 </div>
-
-                <!-- Sodium -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Sodium</span>
@@ -47,8 +39,6 @@
                     </div>
                     <button class="download-btn" data-mod="sodium" onclick="openMod('sodium')">Download</button>
                 </div>
-
-                <!-- Iris -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Iris</span>
@@ -56,8 +46,6 @@
                     </div>
                     <button class="download-btn" data-mod="iris" onclick="openMod('iris')">Download</button>
                 </div>
-
-                <!-- Fabric API -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Fabric API</span>
@@ -65,8 +53,6 @@
                     </div>
                     <button class="download-btn" data-mod="fabricapi" onclick="openMod('fabricapi')">Download</button>
                 </div>
-
-                <!-- Litematica -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Litematica</span>
@@ -74,8 +60,6 @@
                     </div>
                     <button class="download-btn" data-mod="litematica" onclick="openMod('litematica')">Download</button>
                 </div>
-
-                <!-- Replay Mod -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Replay Mod</span>
@@ -83,8 +67,6 @@
                     </div>
                     <button class="download-btn" data-mod="replaymod" onclick="openMod('replaymod')">Download</button>
                 </div>
-
-                <!-- Journey Minimap -->
                 <div class="mod-item">
                     <div class="mod-info">
                         <span class="mod-name">Journey Minimap</span>
@@ -93,23 +75,32 @@
                     <button class="download-btn" data-mod="minimap" onclick="openMod('minimap')">Download</button>
                 </div>
             </div>
-
             <button id="close">close</button>
         </div>
     </div>
-<script src="./script.js" type="module"></script>
-<script type="module">
-    import { elements } from "../../script/elements.js";
-     
-    window.openMod = function(mod) {
-    window.open(modLinks[mod]);
-}
-const parent = window.parent;
+    <script src="./script.js" type="module"></script>
+    <script type="module">
+   
+        const modLinks = {
+            meteor: "https://github.com/etianl/meteor-client-1.20.4/releases",
+            thunderhack: "https://github.com/Pan4ur/ThunderHack-Recode",
+            bthack: "https://github.com/Ferra13671/BThack/releases",
+            sodium: "https://modrinth.com/mod/sodium/versions",
+            iris: "https://modrinth.com/mod/iris/versions",
+            litematica: "https://modrinth.com/mod/litematica",
+            replaymod: "https://www.curseforge.com/minecraft/mc-mods/replay-mod-fabric-and-forge",
+            fabricapi: "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+            minimap: "https://modrinth.com/mod/journeymap"
+        };
 
-document.getElementById("close").addEventListener("click", () => {
-    document.querySelector("body").style.display = "none";
-    parent.document.getElementById("right-content").style.display = "flex";
-});
-</script>
+
+        window.openMod = function(mod) {
+            window.open(modLinks[mod]);
+        }
+
+        document.getElementById("close").addEventListener("click", () => {
+            window.parent.postMessage({ action: "closeMods" }, "*");
+        });
+    </script>
 </body>
 </html>
