@@ -1,7 +1,7 @@
 # HeroinLaunchers
 
 <p align="center">
-  <img src="image/icon.png" width="100px">
+  <img src="https://res.cloudinary.com/dv3uytd5u/image/upload/v1745869652/icon_sdlslt.jpg" width="100px">
 </p>
 
 <h4 align="center">
@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="image/screenshoot.png">
+  <img src="https://res.cloudinary.com/dv3uytd5u/image/upload/v1745869654/screenshoot_ymomfl.png">
 </p>
 
 
