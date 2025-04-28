@@ -1,27 +1,37 @@
-# Heroin Launcher 
+# HeroinLaunchers
 
-**The ultimate launcher for 2b2t players**  
+<p align="center">
+  <img src="image/icon.png" width="100px">
+</p>
+
+<h4 align="center">
+  Heroin Launcher was created for 2b2t players. This launcher includes mods and other features to make your time on 2b2t more comfortable. If you have any ideas on how we can improve the launcher, feel free to send them to lv3601@gmail.com. Also, if you're interested in joining our team, just let me know!
+</h4>
+
+<p align="center">
+  <sub>Launcher designed and developed by lv3601.</sub>
+</p>
+
+<p align="center">
+  <img src="image/screenshoot.png">
+</p>
 
 
-## 🔥 Features  
-✔ **Pre-installed essential mods** for 2b2t  
-✔ **Fast & optimized** Minecraft launching  
-✔ **Fabric Loader integration**  
-✔ **Customizable settings** 
-✔ **Offline and online mode support**  
-✔ **first launcher where you can spawn bots**
+
+## Features
+**Minimalistic design**
+
+**Mods list for any playstyle**
+
+**most popular texture pack list**
+
+**Customizable design**
+
+**Cross platform. The launcher is based on Electron, and supports  Windows 10/11,  MacOS, and  Linux.**
 
 
-## 📥 Installation  
 
-### Windows / macOS / Linux  
-1. Download the latest release from [Releases](https://github.com/your-repo/releases)  
-2. Extract the archive  
-3. Run `heroin-launcher.exe` (Windows) or `heroin-launcher` (macOS/Linux)  
 
-### Using Node.js (Developers)  
-```bash
-git clone https://github.com/your-repo/heroin-launcher.git
-cd heroin-launcher
-npm install
-npm start
+## Soon
+**texture pack list**
+**updated mod installing**
