@@ -9,7 +9,7 @@
 </h4>
 
 <p align="center">
-  <sub>Launcher designed and developed by lv3601.</sub>
+  <sub>Heroin launcher the best solution for 2b2t</sub>
 </p>
 
 <p align="center">
@@ -21,17 +21,15 @@
 ## Features
 **Minimalistic design**
 
-**Mods list for any playstyle**
+**--Mods list for any playstyle**
 
-**most popular texture pack list**
+**--most popular texture pack list**
 
-**Customizable design**
+**--Customizable design**
 
-**Cross platform. The launcher is based on Electron, and supports  Windows 10/11,  MacOS, and  Linux.**
-
-
+**--Cross platform. The launcher is based on Electron, and supports Windows 10/11, MacOS, and Linux.**
 
 
-## Soon
-**texture pack list**
-**updated mod installing**
+
+
+
