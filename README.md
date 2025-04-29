@@ -33,8 +33,11 @@
 
 ## Developers
 **--🖌️design: lv3601**
+
 **--👨‍💻developing: lv3601**
+
 **--🧠moral support: fedespx, deraxe701**
+
 **--🖌️testing: deraxe701**
 
 
