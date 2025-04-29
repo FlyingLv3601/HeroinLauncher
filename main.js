@@ -1,6 +1,8 @@
 const { app, BrowserWindow, ipcMain } = require('electron/main')
 const path = require('node:path')
 const fs = require("fs");
+const {discordRPC} = require("./src/discordRpc");
+const RPC = require("discord-rpc");
 const {launchMinecraft} = require("./src/minecraftlauncher");
 
 function createWindow () {
@@ -23,7 +25,8 @@ function createWindow () {
 }
 
 app.whenReady().then(() => {
-  createWindow()
+  createWindow();
+  discordRPC("Heroin launcher", "hhhhh");
 })
 
 
