@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const versionItems = document.querySelectorAll(".version-item");
 
   function hideAllIframes() {
+    hide(elements.rightContent)
     hide(elements.iframeSettings);
     hide(elements.modsIframe);
+    hide(elements.contactFrame)
   }
 
   elements.dropdown.addEventListener("click", (e) => {
@@ -60,5 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.data.ram) {
       window.electronAPI.sendRamAmount(event.data.ram);
     }
+  });
+
+  elements.contactButton.addEventListener("click", () => {
+    hideAllIframes();
+    show(elements.contactFrame);
   });
 });

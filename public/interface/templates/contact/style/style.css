@@ -1,0 +1,19 @@
+html ,body{
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 0;
+    width: 100%;
+
+    color: white;
+}
+body div{
+    height: 100px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+}
+
+span a{
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+}

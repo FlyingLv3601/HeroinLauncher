@@ -14,6 +14,8 @@ export const elements = {
   iframeSettings: document.getElementById("iframe-settings"),
   mods: document.getElementById("mods-list"),
   modsIframe: document.getElementById("mods-iframe"),
+  contactFrame: document.getElementById("contact-frame"),
+  contactButton: document.getElementById("contact-info"),
   
   //main {heroinn launcher}
   rightContent: document.getElementById("right-content"),
@@ -24,7 +26,6 @@ export const elements = {
   // other shit
   mainContainer: document.getElementById("main-container"),
   loader: document.getElementById("loader"),
-  errorDisplay: document.getElementById("error-message"),
 
 
 
