@@ -1,4 +1,4 @@
-# HeroinLaunchers
+# 💉HeroinLaunchers
 
 <p align="center">
   <img src="https://res.cloudinary.com/dv3uytd5u/image/upload/v1745869652/icon_sdlslt.jpg" width="100px">
@@ -18,7 +18,7 @@
 
 
 
-## Features
+## 🔥Features
 **Minimalistic design**
 
 **--Mods list for any playstyle**
@@ -30,6 +30,12 @@
 **--Cross platform. The launcher is based on Electron, and supports Windows 10/11, MacOS, and Linux.**
 
 
+
+## Developers
+**--🖌️design: lv3601**
+**--👨‍💻developing: lv3601**
+**--🧠moral support: fedespx, deraxe701**
+**--🖌️testing: deraxe701**
 
 
 
