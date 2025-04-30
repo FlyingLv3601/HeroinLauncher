@@ -27,6 +27,14 @@ export const elements = {
   mainContainer: document.getElementById("main-container"),
   loader: document.getElementById("loader"),
 
+  //notifications
+  corr: document.getElementById("correct-text"),
+  err: document.getElementById("error-text"),
+
+
+  //not iframe
+  corrIframe: document.getElementById("correct"),
+  errIframe: document.getElementById("error")
 
 
 };

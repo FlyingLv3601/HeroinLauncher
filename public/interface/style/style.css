@@ -187,3 +187,9 @@ body {
     margin-top: 20px;
     border: none;
 }
+
+.not{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 250px;
+}
