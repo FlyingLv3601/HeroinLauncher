@@ -1,6 +1,5 @@
 import { elements } from './elements.js';
 import { hide, show } from "../../module/showHide.js";
-import {corr, err} from "../../module/notification.js";
 
 
 //get username from localstorage
@@ -10,10 +9,8 @@ const savedNickname = localStorage.getItem('nickname');
 const versionItems = document.querySelectorAll(".version-item");
 
 if (savedNickname) {
+    corr(`username ${savedNickname} was loaded from local storage`)
     elements.playerUserName.value = savedNickname;
-    corr("username was loaded from local storage")
-}else{
-    err("username wasn't founds")
 }
 elements.dropdown.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -36,6 +33,31 @@ elements.playButton.addEventListener("click", () => {
     const nickname = elements.playerUserName.value.trim();
     localStorage.setItem('nickname', nickname);
     window.electronAPI.sendUserInput(nickname, elements.selected.textContent);
+    corr("launching minecraft...")
 });
 
 });
+
+
+
+
+function corr(text) {
+    elements.corrText.innerHTML = text;
+    elements.corr.classList.add("notification-show");
+    elements.err.classList.remove("notification-show");
+  
+    setTimeout(() => {
+      elements.corr.classList.remove("notification-show");
+    }, 2000);
+  }
+  
+  function err(text) {
+    elements.errText.innerHTML = text;
+    elements.err.classList.add("notification-show");
+    elements.corr.classList.remove("notification-show");
+  
+    setTimeout(() => {
+      elements.err.classList.remove("notification-show");
+    }, 2000);
+  }
+  

@@ -2,9 +2,7 @@ import { elements } from './elements.js';
 import { hide, show } from "../../module/showHide.js";
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
-
   function hideAllIframes() {
     hide(elements.rightContent)
     hide(elements.iframeSettings);
@@ -43,3 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
     show(elements.contactFrame);
   });
 });
+
+
+
+
+
+
+
+
+

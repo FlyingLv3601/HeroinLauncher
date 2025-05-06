@@ -28,15 +28,11 @@ export const elements = {
   loader: document.getElementById("loader"),
 
   //notifications
-  corr: document.getElementById("correct-text"),
-  err: document.getElementById("error-text"),
+  corr: document.getElementById("not-correct"),
+  err: document.getElementById("not-err"),
 
-
-  //not iframe
-  corrIframe: document.getElementById("correct"),
-  errIframe: document.getElementById("error")
-
-
+  corrText: document.getElementById("correct-text"),
+  errText: document.getElementById("error-text")
 };
 
 

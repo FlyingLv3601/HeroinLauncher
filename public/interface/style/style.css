@@ -38,7 +38,7 @@ body {
     text-align: center;
     margin-bottom: 30px;
     font-size: 80px;
-    color: #00bfff;
+    color: #ffffff;
 }
 
 .left h2 {
@@ -188,8 +188,71 @@ body {
     border: none;
 }
 
-.not{
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 250px;
+
+
+
+.notification-correct,
+.notification-error {
+    width: 300px;
+    align-items: center;
+    height: 60px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    position: fixed;
+    left: 75%;
+    top: 90%;
+    z-index: 999;
 }
+
+.notification-correct {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 251, 0, 0.397);
+    border-left: 3px solid rgb(0, 255, 0);
+}
+
+.notification-error {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-left: 3px solid rgb(255, 0, 0);
+}
+
+.notification-correct span,
+.notification-error span {
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.notification-show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1920px;
+    letter-spacing: 100px;
+    font-size: 30px;
+    width: 100%;
+    opacity: 0;
+    z-index: -999;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    position: fixed;
+    animation: introAnim 3s forwards;
+  }
+  
+  @keyframes introAnim {
+    0%   { opacity: 1;     z-index: 999;letter-spacing: 100px; font-size: 30px; }
+    50%  { letter-spacing: 2px; font-size: 10px; }
+    99%{z-index: 999;}
+    100% { opacity: 0;     z-index: -999;}
+  }
+  
