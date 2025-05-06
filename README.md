@@ -1,4 +1,4 @@
-# 💉HeroinLaunchers
+# 💉HeroinLauncher
 
 <p align="center">
   <img src="https://res.cloudinary.com/dv3uytd5u/image/upload/v1745869652/icon_sdlslt.jpg" width="100px">
