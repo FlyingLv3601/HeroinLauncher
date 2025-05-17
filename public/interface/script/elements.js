@@ -32,7 +32,12 @@ export const elements = {
   err: document.getElementById("not-err"),
 
   corrText: document.getElementById("correct-text"),
-  errText: document.getElementById("error-text")
+  errText: document.getElementById("error-text"),
+
+
+
+
+  checkBoxFabric: document.getElementById("fabric-select")
 };
 
 

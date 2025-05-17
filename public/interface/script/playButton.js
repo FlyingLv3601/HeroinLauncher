@@ -32,7 +32,11 @@ elements.playButton.addEventListener("click", () => {
     //launching
     const nickname = elements.playerUserName.value.trim();
     localStorage.setItem('nickname', nickname);
-    window.electronAPI.sendUserInput(nickname, elements.selected.textContent);
+    if(elements.checkBoxFabric.checked){
+      window.electronAPI.minecraftFabric(nickname, elements.selected.textContent);
+    }else{
+      window.electronAPI.minecraftClear(nickname, elements.selected.textContent);
+    }
     corr("launching minecraft...")
 });
 

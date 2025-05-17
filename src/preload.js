@@ -1,6 +1,8 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('electronAPI', {
-  sendUserInput: (username, version) => ipcRenderer.send('sendUsername', username, version),
+  minecraftFabric: (username, version) => ipcRenderer.send('minecraftFabric', username, version),
+  minecraftClear: (username, version) => ipcRenderer.send('minecraftClear', username, version),
   sendRamAmount: (ram) => ipcRenderer.send('sendRamAmount', ram),
 });
+

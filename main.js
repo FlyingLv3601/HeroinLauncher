@@ -3,7 +3,8 @@ const path = require('node:path')
 const fs = require("fs");
 const {discordRPC} = require("./src/discordRpc");
 const RPC = require("discord-rpc");
-const {launchMinecraft} = require("./src/minecraftlauncher");
+const { minecraftLauncher } = require('./src/minecraftlauncher');
+const {launchMinecraftFabric} = require("./src/minecraftlauncherfabric");
 
 function createWindow () {
   const win = new BrowserWindow({
@@ -26,13 +27,21 @@ function createWindow () {
 
 app.whenReady().then(() => {
   createWindow();
-  discordRPC("Heroin launcher", "hhhhh");
+  discordRPC("Heroin launcher", "started....");
 })
 
 
-ipcMain.on('sendUsername', async (event, username, version) => {
-    await launchMinecraft(username, version);
+ipcMain.on('minecraftFabric', async (event, username, version) => {
+    await launchMinecraftFabric(username, version);
+    discordRPC("Heroin Launcher", `username:  ${username}`)
 });
+
+
+ipcMain.on('minecraftClear', async (event, username, version) => {
+    await minecraftLauncher(username, version);
+    discordRPC("Heroin Launcher", `username:  ${username}`)
+});
+
 
 
 
